@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import CardResep from '../components/CardResep';
 
 const Resep = () => {
   return (
@@ -74,21 +75,12 @@ const SearchRecipe = () => {
           <>
             {searchResults &&
               searchResults.map((meal) => (
-                <div
+                <CardResep
                   key={meal.idMeal}
-                  className='card card-compact m-5 w-72 bg-base-100 shadow-xl'
-                >
-                  <figure>
-                    <img src={meal.strMealThumb} alt={meal.strMeal} />
-                  </figure>
-                  <div className='card-body'>
-                    <h2 className='card-title'>{meal.strMeal}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className='card-actions justify-end'>
-                      <button className='btn-primary btn'>Buy Now</button>
-                    </div>
-                  </div>
-                </div>
+                  idMeal={meal.idMeal}
+                  strMeal={meal.strMeal}
+                  strMealThumb={meal.strMealThumb}
+                />
               ))}
           </>
         )}

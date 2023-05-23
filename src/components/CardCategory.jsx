@@ -1,22 +1,24 @@
+import { Link } from 'react-router-dom';
+
 /* eslint-disable react/prop-types */
-const CardCategory = ({ category }) => {
+const CardCategory = ({ strCategory, strCategoryThumb }) => {
   return (
     <>
-      <a
+      <Link
+        to={`/${strCategory}`}
         className='card image-full m-5 w-80 transform cursor-pointer overflow-hidden bg-base-100 shadow-lg transition duration-500 hover:-translate-y-1 hover:scale-105 hover:shadow-xl '
-        key={category.idCategory}
       >
         <figure>
-          <img src={category.strCategoryThumb} alt={category.strCategory} />
+          <img src={strCategoryThumb} alt={strCategory} />
         </figure>
         <div className='card-body'>
-          <h2 className='card-title'>{category.strCategory}</h2>
+          <h2 className='card-title'>{strCategory}</h2>
 
           <div className='card-actions justify-end'>
             {/* <button className='btn-primary btn'>Open</button> */}
           </div>
         </div>
-      </a>
+      </Link>
     </>
   );
 };

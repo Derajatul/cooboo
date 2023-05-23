@@ -26,23 +26,25 @@ const Home = () => {
   }, []);
 
   return (
-    
-      <>
-        <Hero />
+    <>
+      <Hero />
 
-        <h2 className='text-center text-2xl font-medium'>Recipe list</h2>
+      <h2 className='text-center text-2xl font-medium'>Recipe category list</h2>
 
-        {loading ? (
-          <Loading />
-        ) : (
-          <div id='recipe-list' className='flex flex-wrap justify-center'>
-            {categories.map((category) => (
-              <CardCategory category={category} />
-            ))}
-          </div>
-        )}
-      </>
-    
+      {loading ? (
+        <Loading />
+      ) : (
+        <div id='recipe-list' className='flex flex-wrap justify-center'>
+          {categories.map((category) => (
+            <CardCategory
+              key={category.idCategory}
+              strCategory={category.strCategory}
+              strCategoryThumb={category.strCategoryThumb}
+            />
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 export default Home;
