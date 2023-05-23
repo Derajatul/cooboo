@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
-import CardResep from '../components/CardResep';
+import RecipeCard from '../components/RecipeCard';
 
-const Resep = () => {
+const SearchPage = () => {
   return (
     <>
       <SearchRecipe />
@@ -75,11 +75,10 @@ const SearchRecipe = () => {
           <>
             {searchResults &&
               searchResults.map((meal) => (
-                <CardResep
+                <RecipeCard
                   key={meal.idMeal}
-                  idMeal={meal.idMeal}
-                  strMeal={meal.strMeal}
-                  strMealThumb={meal.strMealThumb}
+                  title={meal.strMeal}
+                  thumbnail={meal.strMealThumb}
                 />
               ))}
           </>
@@ -88,4 +87,4 @@ const SearchRecipe = () => {
     </>
   );
 };
-export default Resep;
+export default SearchPage;

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const CardResep = ({thumbnail,title}) => {
+const RecipeCard = ({thumbnail,title}) => {
   return (
     <>
       <div
@@ -10,7 +10,7 @@ const CardResep = ({thumbnail,title}) => {
         </figure>
         <div className='card-body'>
           <h2 className='card-title'>{title}</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
           <div className='card-actions justify-end'>
             <button className='btn-primary btn'>Lihat resep</button>
           </div>
@@ -19,4 +19,4 @@ const CardResep = ({thumbnail,title}) => {
     </>
   );
 };
-export default CardResep
+export default RecipeCard

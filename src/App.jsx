@@ -1,9 +1,9 @@
 import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Resep from './pages/Resep';
 import Footer from './components/Footer';
-import Category from './pages/Category';
+import HomePage from './pages/HomePage';
+import CategoryPage from './pages/CategoryPage';
+import SearchPage from './pages/SearchPage';
 
 const App = () => {
   return (
@@ -14,9 +14,9 @@ const App = () => {
 
       <main className='container min-h-screen'>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/:category' element={<Category />} />
-          <Route path='/resep' element={<Resep />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/:category' element={<CategoryPage />} />
+          <Route path='/resep' element={<SearchPage />} />
         </Routes>
       </main>
 

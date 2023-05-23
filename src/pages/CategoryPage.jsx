@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Loading from '../components/Loading';
-import CardResep from '../components/CardResep';
+import RecipeCard from '../components/RecipeCard';
 
-const Category = () => {
+const CategoryPage = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const params = useParams();
@@ -27,7 +27,7 @@ const Category = () => {
 
   return (
     <div>
-      <h2 className='text-center text-2xl font-medium'>
+      <h2 className='text-center text-2xl font-medium my-10'>
         Recipes in the {params.category} category
       </h2>
 
@@ -36,7 +36,7 @@ const Category = () => {
       ) : (
         <div id='recipe-list' className='flex flex-wrap justify-center'>
           {recipes.map((recipe) => (
-            <CardResep
+            <RecipeCard
               key={recipe.idMeal}
               id={recipe.idMeal}
               title={recipe.strMeal}
@@ -49,4 +49,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default CategoryPage;

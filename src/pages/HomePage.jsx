@@ -2,10 +2,10 @@
 import { useEffect, useState } from 'react';
 import Hero from '../components/Hero';
 import axios from 'axios';
-import CardCategory from '../components/CardCategory';
 import Loading from '../components/Loading';
+import CategoryCard from '../components/CategoryCard';
 
-const Home = () => {
+const HomePage = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -36,10 +36,10 @@ const Home = () => {
       ) : (
         <div id='recipe-list' className='flex flex-wrap justify-center'>
           {categories.map((category) => (
-            <CardCategory
+            <CategoryCard
               key={category.idCategory}
-              strCategory={category.strCategory}
-              strCategoryThumb={category.strCategoryThumb}
+              title={category.strCategory}
+              thumbnail={category.strCategoryThumb}
             />
           ))}
         </div>
@@ -47,4 +47,4 @@ const Home = () => {
     </>
   );
 };
-export default Home;
+export default HomePage;
