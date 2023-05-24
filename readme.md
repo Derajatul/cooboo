@@ -1,6 +1,6 @@
-# Nama Website
+# Hidangan Internasional
 
-Hidangan Internasional
+Website Resep Makanan
 
 ## Demo
 
