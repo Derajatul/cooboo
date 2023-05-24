@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import CategoryPage from './pages/CategoryPage';
 import SearchPage from './pages/SearchPage';
+import MealDetail from './pages/MealDetail';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/:category' element={<CategoryPage />} />
+          <Route path='/:category/:id' element={<MealDetail />} />
           <Route path='/resep' element={<SearchPage />} />
         </Routes>
       </main>
