@@ -1,8 +1,8 @@
-import Button from "./Button";
+import Button from './Button';
 
 const Hero = () => {
   return (
-    <div className='hero block max-h-screen bg-base-100'>
+    <div className='mt-12 max-h-screen bg-base-100'>
       <div className='hero-content flex flex-col lg:flex-row-reverse'>
         <img
           src='./hero-food.webp'
@@ -22,14 +22,6 @@ const Hero = () => {
           <Button />
         </div>
       </div>
-      <hr />
-      <h3 className='mt-5 text-center text-xl font-semibold'>
-        Makanan Terkenal dari seluruh dunia
-      </h3>
-      <p className='mx-auto mt-1 max-w-md text-center'>
-        kami menyediakan berbagai macam resep makanan dan minuman dari berbagai
-        negara dengan cita rasa tinggi dari chef ternama
-      </p>
     </div>
   );
 };
