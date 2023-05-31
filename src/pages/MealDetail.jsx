@@ -51,7 +51,7 @@ const MealDetail = () => {
                 className='mx-auto w-96 rounded-3xl'
               />
 
-              <div className='mt-3 flex'>
+              <div className='mt-12 flex'>
                 <div>
                   <h4 className='text-xl font-medium text-center'>Bahan-bahan</h4>
                   <table className='table mt-3'>
@@ -166,7 +166,7 @@ const MealDetail = () => {
                   </table>
                 </div>
 
-                <div className='ml-5'>
+                <div className='ml-10'>
                   <h4 className='text-xl font-medium text-center'>Petunjuk</h4>
                   <p className='mt-3'>{meal.strInstructions}</p>
 
