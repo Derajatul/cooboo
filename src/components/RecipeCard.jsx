@@ -3,17 +3,16 @@ import { Link } from 'react-router-dom';
 
 const RecipeCard = ({ thumbnail, title, id }) => {
   return (
-    <div className='card card-compact m-5 w-72 bg-base-100 shadow-xl'>
-      <figure>
-        <img src={thumbnail} alt={title} />
-      </figure>
-      <div className='card-body'>
-        <h2 className='card-title'>{title}</h2>
-        <Link to={`/${title}/${id}`} className='card-actions justify-end'>
-          <button className='btn-primary btn'>Lihat resep</button>
-        </Link>
+    <Link to={`/${title}/${id}`} className='card-actions'>
+      <div className='card card-compact m-4 w-52 bg-base-100 transition duration-500 hover:-translate-y-1 hover:scale-105'>
+        <figure>
+          <img src={thumbnail} alt={title} />
+        </figure>
+        <div className='card-body'>
+          <h2 className='card-title'>{title}</h2>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

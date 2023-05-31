@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import CategoryPage from './pages/CategoryPage';
-import SearchPage from './pages/SearchPage';
 import MealDetail from './pages/MealDetail';
 import AboutPage from './pages/AboutPage';
+import MenuPage from './pages/MenuPage';
 
 const App = () => {
   return (
@@ -18,9 +18,9 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
-          <Route path='/:category' element={<CategoryPage />} />
-          <Route path='/:category/:id' element={<MealDetail />} />
-          <Route path='/resep' element={<SearchPage />} />
+          <Route path='/menu' element={<MenuPage />} />
+          <Route path='/:menu' element={<CategoryPage />} />
+          <Route path='/:menu/:id' element={<MealDetail />} />
         </Routes>
       </main>
 

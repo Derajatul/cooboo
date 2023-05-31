@@ -21,9 +21,9 @@ export default {
       {
         myTheme: {
           primary: "#72C269",
-          secondary: "#f6d860",
-          accent: "#37cdbe",
-          neutral: "#3d4451",
+          // secondary: "#72C269",
+          // accent: "#72C269",
+       
           "base-100": "#FFFFFF"
         }
       },

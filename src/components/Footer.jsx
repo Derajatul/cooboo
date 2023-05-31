@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer className='footer bg-base-200 p-10 text-base-content rounded-t-xl'>
+      <footer className='footer bg-base-100 p-10 text-base-content rounded-t-xl'>
         <div>
           <span className='footer-title'>Services</span>
           <a className='link-hover link'>Branding</a>
@@ -23,7 +23,7 @@ const Footer = () => {
           <a className='link-hover link'>Cookie policy</a>
         </div>
       </footer>
-      <footer className='footer border-t border-base-300 bg-base-200 px-10 py-4 text-base-content'>
+      <footer className='footer border-t border-base-100 bg-base-100 px-10 py-4 text-base-content'>
         <div className='grid-flow-col items-center'>
           <svg
             width='24'

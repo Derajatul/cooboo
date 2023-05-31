@@ -13,7 +13,7 @@ const CategoryPage = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://www.themealdb.com/api/json/v1/1/filter.php?c=${params.category}`
+          `https://www.themealdb.com/api/json/v1/1/filter.php?c=${params.menu}`
         );
         setRecipes(response.data.meals);
         setLoading(false);
@@ -23,12 +23,12 @@ const CategoryPage = () => {
       }
     };
     fetchData();
-  }, [params.category]);
+  }, [params.menu]);
 
   return (
     <div>
       <h2 className='text-center text-2xl font-medium my-10'>
-        Recipes in the {params.category} category
+        Recipes in the {params.menu} category
       </h2>
 
       {loading ? (
