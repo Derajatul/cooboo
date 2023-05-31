@@ -8,7 +8,7 @@ const MenuCard = ({ title, thumbnail }) => {
         to={`/${title}`}
         className='transform cursor-pointer overflow-hidden bg-base-100 transition duration-500 hover:-translate-y-1 hover:scale-105'
       >
-        <div className='card w-52 bg-base-100 m-4'>
+        <div className='card  bg-base-100 border-2 m-4 w-52'>
           <div className='card-body'>
             <h2 className='card-title'>{title}</h2>
           </div>

@@ -25,7 +25,7 @@ const FavoritesPage = () => {
           <>
             <div className='flex flex-col'>
               <Link to={`/${recipe.title}/${recipe.id}`}>
-                <div className='card-compact card m-4 w-52 bg-base-100 transition duration-500 hover:-translate-y-1 hover:scale-105'>
+                <div className='card-compact card border-2 m-4 w-52 bg-base-100 transition duration-500 hover:-translate-y-1 hover:scale-105'>
                   <figure>
                     <img src={recipe.thumbnail} alt={recipe.title} />
                   </figure>

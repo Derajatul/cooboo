@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 const Navbar = () => {
+  const [showMenu,setShowMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+  }
   return (
     <div className='navbar rounded-b-xl'>
       <div className='flex-1'>
@@ -7,7 +14,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className='flex-none'>
-        <ul className='menu menu-horizontal px-1'>
+        <ul className={`menu ${showMenu ? 'show' : ''} menu-horizontal px-1`}>
           <li>
             <a href='/' className='text-base font-medium'>
               Home
@@ -32,6 +39,11 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <div className={`bar ${showMenu ? 'change' : ''}`}></div>
+          <div className={`bar ${showMenu ? 'change' : ''}`}></div>
+          <div className={`bar ${showMenu ? 'change' : ''}`}></div>
+        </div>
       </div>
     </div>
   );

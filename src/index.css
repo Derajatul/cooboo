@@ -10,3 +10,44 @@
   font-family: 'Poppins', sans-serif;
   /* border: 1px solid red; */
 }
+/* CSS untuk hamburger menu */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change.bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.change.bar:nth-child(2) {
+  opacity: 0;
+}
+
+.change.bar:nth-child(3) {
+  transform: rotate(45deg) translate(-4px, -6px);
+}
+
+/* Tampilan mobile */
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .show {
+    display: block;
+  }
+}
