@@ -1,10 +1,10 @@
-# Hidangan Internasional
+# Resep Makanan
 
 Website Resep Makanan
 
 ## Demo
 
-[Demo Website](https://www.example.com)
+[Demo Website](https://resep-makanan-six.vercel.app/)
 
 ## Deskripsi
 
@@ -15,8 +15,8 @@ Website Resep Makanan adalah sebuah platform yang menyediakan koleksi resep maka
 - Tampilan kategori makanan
 - Pencarian resep berdasarkan nama atau kategori
 - Detail resep makanan termasuk bahan, langkah-langkah, dan gambar
-- Menyimpan resep favorit
-- Menambahkan resep ke daftar belanja
+- (belum) Menyimpan resep favorit
+- (belum) Menambahkan resep ke daftar belanja
 - Daftar makanan populer
 - Fitur responsif untuk penggunaan di perangkat mobile
 
