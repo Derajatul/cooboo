@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import CategoryPage from './pages/CategoryPage';
 import SearchPage from './pages/SearchPage';
 import MealDetail from './pages/MealDetail';
+import AboutPage from './pages/AboutPage';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <main className='container min-h-screen'>
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
           <Route path='/:category' element={<CategoryPage />} />
           <Route path='/:category/:id' element={<MealDetail />} />
           <Route path='/resep' element={<SearchPage />} />
