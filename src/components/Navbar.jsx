@@ -21,6 +21,12 @@ const Navbar = () => {
           </li>
 
           <li>
+            <a href='/favorites' className='text-base font-medium'>
+              Favorites
+            </a>
+          </li>
+
+          <li>
             <a href='/about' className='text-base font-medium'>
               About
             </a>

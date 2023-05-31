@@ -2,7 +2,7 @@ import Button from './Button';
 
 const Hero = () => {
   return (
-    <div className='my-12 max-h-screen bg-base-100'>
+    <div className='my-10 max-h-screen bg-base-100'>
       <div className='hero-content flex flex-col lg:flex-row-reverse'>
         <img
           src='./hero-food.webp'

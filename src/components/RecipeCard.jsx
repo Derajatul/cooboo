@@ -1,18 +1,43 @@
 /* eslint-disable react/prop-types */
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FavoriteRecipesContext } from '../favoriteRecipesContext';
 
 const RecipeCard = ({ thumbnail, title, id }) => {
+  const { addToFavorites, favoriteRecipes } = useContext(
+    FavoriteRecipesContext
+  );
+  const [isAddedToFavorites, setIsAddedToFavorites] = useState(false);
+
+  const handleAddToFavorites = () => {
+    addToFavorites({ id, title, thumbnail });
+    setIsAddedToFavorites(true);
+  };
+
+  // Cek apakah resep sudah ada di daftar favorit berdasarkan id
+  const isRecipeInFavorites = favoriteRecipes.some(
+    (recipe) => recipe.id === id
+  );
   return (
-    <Link to={`/${title}/${id}`} className='card-actions'>
-      <div className='card card-compact m-4 w-52 bg-base-100 transition duration-500 hover:-translate-y-1 hover:scale-105'>
-        <figure>
-          <img src={thumbnail} alt={title} />
-        </figure>
-        <div className='card-body'>
-          <h2 className='card-title'>{title}</h2>
+    <div className='flex flex-col'>
+      <Link to={`/${title}/${id}`}>
+        <div className='card-compact card m-4 w-52 bg-base-100 transition duration-500 hover:-translate-y-1 hover:scale-105'>
+          <figure>
+            <img src={thumbnail} alt={title} />
+          </figure>
+          <div className='card-body h-24'>
+            <h2 className='card-title'>{title}</h2>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+      
+      {!isAddedToFavorites && !isRecipeInFavorites && (
+        <button onClick={handleAddToFavorites} className='btn btn-primary w-52 mx-auto'>Add to Favorites</button>
+      )}
+      {isAddedToFavorites || isRecipeInFavorites ? (
+        <button disabled className='btn btn-primary w-52 mx-auto'>Added to Favorites</button>
+      ) : null}
+    </div>
   );
 };
 

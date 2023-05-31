@@ -24,7 +24,7 @@ const MenuPage = () => {
   }, []);
   return (
     <>
-      <h3 className='flex justify-center my-5 text-2xl font-semibold'>Menu</h3>
+      <h3 className='flex justify-center my-10 text-2xl font-semibold'>Menu</h3>
 
       {loading ? (
         <Loading />

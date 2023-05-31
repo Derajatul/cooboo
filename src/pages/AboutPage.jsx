@@ -3,8 +3,8 @@ import Button from "../components/Button"
 const AboutPage = () => {
   return (
     <>
-      <h3 className='pt-5 text-2xl font-semibold'>
-        Selamat datang di Web Resep Makanan!{' '}
+      <h3 className='mt-10 text-2xl font-semibold text-center'>
+        Selamat datang di Web Resep Makanan!
       </h3>
       <p className='py-3'>
         Kami adalah platform online yang menyediakan resep makanan yang lezat
@@ -15,7 +15,9 @@ const AboutPage = () => {
         perjalanan memasak yang menyenangkan. Selamat memasak dan menciptakan
         hidangan lezat!
       </p>
+
       <Button />
+
     </>
   );
 };
