@@ -50,7 +50,6 @@ const Navbar = () => {
           <div className={`bar ${showMenu ? 'change' : ''}`}></div>
           <div className={`bar ${showMenu ? 'change' : ''}`}></div>
           <div className={`bar ${showMenu ? 'change' : ''}`}></div>
-          <div className={`bar ${showMenu ? 'change' : ''}`}></div>
         </div>
       </div>
     </div>
