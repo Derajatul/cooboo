@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className='navbar rounded-b-xl'>
       <div className='flex-1'>
         <a className='btn-ghost btn' href='/'>
-          <p className='text-xl font-bold'>Resep Makanan</p>
+          <p className='text-xl font-bold'>CooBoo</p>
         </a>
       </div>
       <div className='flex-none'>
@@ -45,7 +45,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        
+
         <div className='hamburger-menu' onClick={toggleMenu}>
           <div className={`bar ${showMenu ? 'change' : ''}`}></div>
           <div className={`bar ${showMenu ? 'change' : ''}`}></div>

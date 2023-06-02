@@ -8,7 +8,7 @@ const FAQPage = () => {
         className='collapse-plus collapse mt-5 border border-base-300 '
       >
         <div className='collapse-title text-xl font-medium'>
-          Apa itu Website Resep Makanan?
+          Apa itu CooBoo?
         </div>
         <div className='collapse-content'>
           <p>

@@ -7,18 +7,37 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'robots.txt', 'sw.js'],
       manifest: {
-        name: 'My PWA',
-        short_name: 'PWA',
-        start_url: '/',
-        display: 'standalone',
-        background_color: '#ffffff',
+        name: 'CooBoo - Resep Makanan',
+        short_name: 'CooBoo',
+        description: 'Aplikasi resep makanan',
         theme_color: '#ffffff',
+        background_color: '#ffffff',
         icons: [
           {
-            src: '/icon.png',
+            src: '/favicon-16x16.png',
+            sizes: '16x16',
+            type: 'image/png',
+          },
+          {
+            src: '/favicon-32x32.png',
+            sizes: '32x32',
+            type: 'image/png',
+          },
+         
+          {
+            src: '/apple-touch-icon.png',
+            sizes: '180x180',
+            type: 'image/png',
+          },
+          {
+            src: '/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+      
+          {
+            src: '/android-chrome-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
