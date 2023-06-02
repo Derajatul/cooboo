@@ -14,12 +14,12 @@ const Hero = () => {
             Ayo Mulai Memasak Dengan Resep Populer
           </h1>
           <p className='pt-6 text-center lg:text-left'>
-            Ingin memasak tapi bingung bagaimana mulainya?
+            Ingin memasak tapi bingung bagaimana memulainya?
           </p>
           <p className='pb-6 text-center lg:text-left'>
-            Tidak perlu khawatir lagi!
+            Tidak perlu khawatir!
           </p>
-          <Button />
+          <Button text="Mulai Memasak"/>
         </div>
       </div>
     </div>

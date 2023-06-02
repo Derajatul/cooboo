@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { FavoriteRecipesContext } from '../favoriteRecipesContext';
 import { Link } from 'react-router-dom';
+import { BsTrash } from 'react-icons/bs';
 
 const FavoritesPage = () => {
   const { favoriteRecipes, removeFromFavorites } = useContext(
@@ -36,7 +37,8 @@ const FavoritesPage = () => {
               </Link>
 
               <button onClick={() => handleRemoveFromFavorites(recipe.id)} className='btn btn-secondary w-52 mx-auto'>
-                Remove from Favorites
+              <BsTrash className='mr-2'/>
+              Remove
               </button>
             </div>
           </>

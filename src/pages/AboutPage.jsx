@@ -16,7 +16,7 @@ const AboutPage = () => {
         hidangan lezat!
       </p>
 
-      <Button />
+      <Button text="Mulai Memasak"/>
 
     </>
   );

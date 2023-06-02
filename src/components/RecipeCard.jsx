@@ -2,6 +2,7 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FavoriteRecipesContext } from '../favoriteRecipesContext';
+import { AiFillHeart } from 'react-icons/ai';
 
 const RecipeCard = ({ thumbnail, title, id }) => {
   const { addToFavorites, favoriteRecipes } = useContext(
@@ -18,6 +19,7 @@ const RecipeCard = ({ thumbnail, title, id }) => {
   const isRecipeInFavorites = favoriteRecipes.some(
     (recipe) => recipe.id === id
   );
+
   return (
     <div className='flex flex-col'>
       <Link to={`/${title}/${id}`}>
@@ -30,12 +32,17 @@ const RecipeCard = ({ thumbnail, title, id }) => {
           </div>
         </div>
       </Link>
-      
+
       {!isAddedToFavorites && !isRecipeInFavorites && (
-        <button onClick={handleAddToFavorites} className='btn btn-primary w-52 mx-auto'>Add to Favorites</button>
+        <button onClick={handleAddToFavorites} className='btn btn-primary w-52 mx-auto flex items-center'>
+          <AiFillHeart className='mr-2' />
+          Favorite
+        </button>
       )}
       {isAddedToFavorites || isRecipeInFavorites ? (
-        <button disabled className='btn btn-primary w-52 mx-auto'>Added to Favorites</button>
+        <button disabled className='btn btn-primary w-52 mx-auto'>
+          Added to Favorites
+        </button>
       ) : null}
     </div>
   );

@@ -48,13 +48,13 @@ const MealDetail = () => {
               <img
                 src={meal.strMealThumb}
                 alt={meal.strMeal}
-                className='mx-auto w-96 rounded-3xl'
+                className='mx-auto w-96 max-w-full rounded-3xl'
               />
 
-              <div className='mt-12 flex'>
+              <div className='mt-12 flex flex-col md:flex-row'>
                 <div>
                   <h4 className='text-xl font-medium text-center'>Bahan-bahan</h4>
-                  <table className='table mt-3'>
+                  <table className='table mt-3 mx-auto'>
                     {/* head */}
                     <thead>
                       <tr>
@@ -166,13 +166,13 @@ const MealDetail = () => {
                   </table>
                 </div>
 
-                <div className='ml-10'>
+                <div className='md:pl-10 pl-0'>
                   <h4 className='text-xl font-medium text-center'>Petunjuk</h4>
                   <p className='mt-3'>{meal.strInstructions}</p>
 
                   <iframe
-                    className='mt-3'
-                    width='560'
+                    className='mt-3 max-w-full'
+                    width='550'
                     height='315'
                     src={getEmbedUrl(meal.strYoutube)}
                     title={meal.strMeal}

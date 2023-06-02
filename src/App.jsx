@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage';
 import MenuPage from './pages/MenuPage';
 import { FavoriteRecipesProvider } from './favoriteRecipesContext';
 import FavoritesPage from './pages/FavoritesPage';
+import FAQPage from './pages/FAQPage';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <Route path='/about' element={<AboutPage />} />
             <Route path='/menu' element={<MenuPage />} />
             <Route path='/favorites' element={<FavoritesPage />} />
+            <Route path='/faq' element={<FAQPage />} />
             <Route path='/:menu' element={<CategoryPage />} />
             <Route path='/:menu/:id' element={<MealDetail />} />
           </Routes>
