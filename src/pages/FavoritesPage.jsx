@@ -20,30 +20,39 @@ const FavoritesPage = () => {
 
   return (
     <div>
-      <h3 className="text-2xl font-semibold my-10 text-center">Favorite Recipes</h3>
-      <div id='recipe-list' className='flex flex-wrap justify-center'>
-        {recipes.map((recipe) => (
-          <>
-            <div className='flex flex-col'>
-              <Link to={`/${recipe.title}/${recipe.id}`}>
-                <div className='card-compact card border-2 m-4 w-52 bg-base-100 transition duration-500 hover:-translate-y-1 hover:scale-105'>
-                  <figure>
-                    <img src={recipe.thumbnail} alt={recipe.title} />
-                  </figure>
-                  <div className='card-body h-24'>
-                    <h2 className='card-title'>{recipe.title}</h2>
+      <h3 className='my-10 text-center text-2xl font-semibold'>
+        Favorite Recipes
+      </h3>
+      {recipes.length === 0 ? (
+        <p className='text-center'>Favorite masih kosong</p>
+      ) : (
+        <div id='recipe-list' className='flex flex-wrap justify-center'>
+          {recipes.map((recipe) => (
+            <>
+              <div className='flex flex-col'>
+                <Link to={`/${recipe.title}/${recipe.id}`}>
+                  <div className='card card-compact m-4 w-52 border-2 bg-base-100 transition duration-500 hover:-translate-y-1 hover:scale-105'>
+                    <figure>
+                      <img src={recipe.thumbnail} alt={recipe.title} />
+                    </figure>
+                    <div className='card-body h-24'>
+                      <h2 className='card-title'>{recipe.title}</h2>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
 
-              <button onClick={() => handleRemoveFromFavorites(recipe.id)} className='btn btn-secondary w-52 mx-auto'>
-              <BsTrash className='mr-2'/>
-              Remove
-              </button>
-            </div>
-          </>
-        ))}
-      </div>
+                <button
+                  onClick={() => handleRemoveFromFavorites(recipe.id)}
+                  className='btn-secondary btn mx-auto w-52'
+                >
+                  <BsTrash className='mr-2' />
+                  Remove
+                </button>
+              </div>
+            </>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
