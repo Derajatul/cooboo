@@ -4,7 +4,7 @@ Website Resep Makanan
 
 ## Demo
 
-[Demo Website](https://resep-makanan-six.vercel.app/)
+[Demo Website](https://cooboo.vercel.app/)
 
 ## Deskripsi
 
