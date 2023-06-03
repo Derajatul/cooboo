@@ -31,7 +31,7 @@ const App = () => {
         </FavoriteRecipesProvider>
       </main>
 
-      <footer className='container'>
+      <footer className='container footer footer-center pt-6 text-base-content'>
         <Footer />
       </footer>
     </>
